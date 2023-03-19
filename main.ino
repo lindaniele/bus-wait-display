@@ -12,6 +12,7 @@ String myStopCode    = "11829";         // The Stop Code of the A.T.M. bus line 
 
 LiquidCrystal_I2C lcd(0x3F, 16, 2);     // set up the LCD's number of columns and rows
 
+unsigned long lastTime = 0;            // Global variable storing the last time you refreshed the waiting time of the bus
 unsigned long timerDelay = 5000;        // Set timer to 5 seconds (5000)
 
 String waitMessage = "";                // Global variable storing the waiting time of the bus
@@ -77,7 +78,6 @@ void loop() {
         lastTime = millis();
     }
 }
-
 
 void refreshWaitMessage(const char* stopCode, const char* lineCode) {
     WiFiClient client;

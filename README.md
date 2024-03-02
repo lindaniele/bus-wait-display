@@ -20,7 +20,7 @@ The "Real-Time Bus Wait Time Display" project provides a convenient way to monit
 To set up the project, you will need the following hardware components:
 
 - ESP8266 microcontroller
-- LCD display (compatible with the LiquidCrystal_I2C library)
+- LCD display (16x2 or similar, compatible with the LiquidCrystal_I2C library)
 - Jumper wires
 - Breadboard (optional, for prototyping)
 - Power supply or battery pack (if not powered through USB)
@@ -36,7 +36,7 @@ The project relies on the following software:
 - Arduino JSON library
 - LiquidCrystal_I2C library
 
-Make sure you have these libraries installed in your Arduino IDE before proceeding with the installation.
+Make sure you have these libraries installed in your Arduino IDE before proceeding with the installation: Go to **Sketch > Include Library > Manage Libraries**.
 
 ## Installation and Setup
 
@@ -48,7 +48,9 @@ Follow these steps to install and set up the "Real-Time Bus Wait Time Display" p
 
 3. Connect the ESP8266 microcontroller and LCD display to your computer using jumper wires and a breadboard if necessary.
 
-4. In the Arduino IDE, make sure you have selected the appropriate board and port for the ESP8266.
+4. In the Arduino IDE, make sure you have selected the appropriate board and port for the ESP8266:
+   - Go to **Tools > Board** and select your ESP8266 board model.
+   - Go to **Tools > Port** and select the COM port your ESP8266 is connected to.
 
 5. Open the `main.ino` file and modify the following variables as per your requirements:
    - `ssid`: Set the SSID (name) of your Wi-Fi network.
@@ -60,7 +62,12 @@ Follow these steps to install and set up the "Real-Time Bus Wait Time Display" p
 
 7. Once the upload is complete, open the Serial Monitor in the Arduino IDE to view the ESP8266's connection status and IP address.
 
-8. Connect the LCD display to the ESP8266 microcontroller according to the wiring instructions provided in the project.
+8. Connect the LCD display to the ESP8266 microcontroller according to the wiring instructions provided in the project. Generally the connections are as follows:
+   - **VCC** of LCD to **3.3V** on ESP8266.
+     - Most I2C LCD displays are designed to work with 5V power supply. However, many can also work at 3.3V, which is the operating voltage of the ESP8266. Ensure that your specific LCD model can operate safely and reliably at 3.3V. If your LCD requires 5V, you may need to use a voltage regulator or level shifter to safely connect it to the ESP8266.
+   - **GND** of LCD to **GND** on ESP8266.
+   - **SDA** of LCD to **D2** (or the I2C SDA pin) on ESP8266.
+   - **SCL** of LCD to **D1** (or the I2C SCL pin) on ESP8266.
 
 9. Power on the ESP8266 microcontroller. The LCD display should show the bus line code and the waiting time information.
 
@@ -84,5 +91,4 @@ Please note that this project relies on the availability and accuracy of the wai
 Contributions to the "Real-Time Bus Wait Time Display" project are welcome! If you have any ideas, improvements, or bug fixes, please feel free to open an issue or submit a pull request in the project repository.
 
 ## License
-
-The "Real-Time Bus Wait Time Display" project is licensed under the [MIT License](LICENSE). Feel free to modify and distribute the code for personal or commercial use.
+The "Real-Time Bus Wait Time Display" project by Daniele Lin [complies with ATM's Terms and Conditions](COMPLIANCE) and is licensed under [CC BY-NC-SA 4.0](LICENSE). To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-sa/4.0/.

@@ -18,7 +18,7 @@ unsigned long lastTime = 0;             // Initialize lastTime with 0
 String waitMessage = "";                // Global variable storing the waiting time of the bus
 String refreshedWaitMessage = "";       // Global variable storing the new waiting time of the bus
 
-const char* serverName = "https://giromilano.atm.it/proxy.ashx";
+const char* serverName = "https://giromilano.atm.it/proxy.tpportal/proxy.ashx";  // API server
 
 void setup()
 {
@@ -99,12 +99,16 @@ void refreshWaitMessage(const char* stopCode, const char* lineCode) {
     http.begin(client, serverName);
 
     // Specify headers
-    http.addHeader("User-Agent", "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:101.0) Gecko/20100101 Firefox/101.0");
+    http.addHeader("User-Agent", "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:122.0) Gecko/20100101 Firefox/122.0");
     http.addHeader("Content-Type", "application/x-www-form-urlencoded;charset=utf-8");
+    http.addHeader("Accept-Language", "en-US,en;q=0.5");  // Include the Accept-Language header
     http.addHeader("Referer", "https://giromilano.atm.it/");
+    http.addHeader("cookie", "TS01ac3475=0199b2c74a586b2cd3f979a7ee12300ddcc689b1fefbbbc91f6642ce9f2d4ff46133460b04f410c5a5d64ffea5e2b6581194aaeabc");
 
-    // Data to send with HTTP POST
-    String httpRequestData = "url=tpPortal%2Fgeodata%2Fpois%2Fstops%2F" + stopCode;
+
+    // Prepare the payload for the POST request
+    String httpRequestData = "url=tpPortal%2Fgeodata%2Fpois%2Fstops%2F" + String(stopCode);
+
 
     // Send HTTP POST request
     int httpResponseCode = http.POST(httpRequestData);

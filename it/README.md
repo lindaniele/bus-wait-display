@@ -2,7 +2,7 @@
 
 Il progetto "Monitoraggio Tempi di Attesa dell'ATM" utilizza un microcontrollore ESP8266 e uno schermo LCD per mostrare i tempi di attesa in tempo reale dei mezzi ATM Milano (Azienda Trasporti Milanesi). Impostando il codice della linea e della fermata, il dispositivo recupera le informazioni sui tempi di attesa dal server di GiroMilano ATM e le visualizza sullo schermo LCD.
 
-Il linguaggio usato in questo README potrebbe risultare purista. [Leggilo in inglese.](./README)
+Il linguaggio usato in questo README potrebbe risultare purista. [Leggilo in inglese.](../README.md)
 
 ## Indice
 - [Panoramica](#panoramica)

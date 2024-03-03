@@ -2,7 +2,7 @@
 
 The "Real-Time Bus Wait Time Display" project utilizes an ESP8266 microcontroller and an LCD display to show the real-time waiting time of buses from Azienda Trasporti Milanesi (ATM Milano), a public transport company in Milan. By setting the bus line and stop code, the device fetches the waiting time information from the ATM server (GiroMilano) and displays it on the LCD screen.
 
-[Leggi questo in italiano](it/README_IT.md)
+[Leggi questo in italiano](it/README)
 
 ## Table of Contents
 - [Project Overview](#project-overview)

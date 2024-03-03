@@ -1,6 +1,8 @@
 # Real-Time Bus Wait Time Display
 
-The "Real-Time Bus Wait Time Display" project utilizes an ESP8266 microcontroller and an LCD display to show the real-time waiting time of buses from Azienda Trasporti Milanesi (ATM), a public transport company in Milan. By setting the bus line and stop code, the device fetches the waiting time information from the ATM server and displays it on the LCD screen.
+The "Real-Time Bus Wait Time Display" project utilizes an ESP8266 microcontroller and an LCD display to show the real-time waiting time of buses from Azienda Trasporti Milanesi (ATM Milano), a public transport company in Milan. By setting the bus line and stop code, the device fetches the waiting time information from the ATM server (GiroMilano) and displays it on the LCD screen.
+
+[Leggi questo in italiano](it/README_IT.md)
 
 ## Table of Contents
 - [Project Overview](#project-overview)
@@ -91,4 +93,11 @@ Please note that this project relies on the availability and accuracy of the wai
 Contributions to the "Real-Time Bus Wait Time Display" project are welcome! If you have any ideas, improvements, or bug fixes, please feel free to open an issue or submit a pull request in the project repository.
 
 ## License
-The "Real-Time Bus Wait Time Display" project by Daniele Lin [complies with ATM's Terms and Conditions](COMPLIANCE) and is licensed under [CC BY-NC-SA 4.0](LICENSE). To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-sa/4.0/.
+
+The "Real-Time Bus Wait Time Display" project by Daniele Lin [complies with ATM's Terms and Conditions](COMPLIANCE_ATM.md) and is licensed under a
+[Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License][cc-by-nc-sa].
+
+[![CC BY-NC-SA 4.0][cc-by-nc-sa-image]][cc-by-nc-sa]
+
+[cc-by-nc-sa]: http://creativecommons.org/licenses/by-nc-sa/4.0/
+[cc-by-nc-sa-image]: https://licensebuttons.net/l/by-nc-sa/4.0/88x31.png
